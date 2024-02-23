@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  node:
+    container_name: node
+    tty: true
+    build:
+      context: .
+      args:
+        - NODE_VERSION=${NODE_VERSION}
+        - WORKDIR=${WORKDIR}
+    volumes:
+      - type: bind
+        source: ${SRC_DIR}
+        target: ${TGT_DIR}
+    environment:
+      TZ: Asia/Tokyo
+      # WATCHPACK_POLLING: true
+    ports:
+      - ${EXPOSE_HOST_PORT}:${EXPOSE_CONTAINER_PORT}
