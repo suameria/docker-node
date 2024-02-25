@@ -15,6 +15,6 @@ services:
         target: ${TGT_DIR}
     environment:
       TZ: Asia/Tokyo
-      # WATCHPACK_POLLING: true
+      WATCHPACK_POLLING: true
     ports:
       - ${EXPOSE_HOST_PORT}:${EXPOSE_CONTAINER_PORT}
