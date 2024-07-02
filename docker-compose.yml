@@ -21,3 +21,5 @@ services:
 
 networks:
   backend_network:
+    # ネットワーク名を明示的に設定
+    name: backend_network
