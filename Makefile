@@ -46,3 +46,7 @@ app: ## docker-compose exec app bash
 PHONY: db
 db: ## docker-compose exec db bash
 	$(MK_DOCKER_COMPOSE_EXEC) db bash
+
+PHONY: node
+node: ## docker-compose exec node bash
+	$(MK_DOCKER_COMPOSE_EXEC) node bash
